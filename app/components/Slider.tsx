@@ -9,7 +9,7 @@ export default function Slider() {
   const slides = [
     {
       id: 1,
-      image: 'https://static.wixstatic.com/media/f34943_bd0dc73a4ebc4bcc836bc141d00ba737~mv2.jpg/v1/fill/w_1800,h_797,al_c,q_85,enc_avif,quality_auto/f34943_bd0dc73a4ebc4bcc836bc141d00ba737~mv2.jpg',
+      image: 'https://ik.imagekit.io/efarm/website/combine_harvesting_in_sunset_4ff3ab43db.jpg?tr=w-1600',
       title: 'Profesyoneller İçin Yarının Makinelerini Tasarlıyoruz',
       subtitle: 'Tarımda yenilikçi teknolojilerle geleceği şekillendiriyoruz'
     },
@@ -21,13 +21,13 @@ export default function Slider() {
     },
     {
       id: 3,
-      image: 'https://static.wixstatic.com/media/f34943_bd0dc73a4ebc4bcc836bc141d00ba737~mv2.jpg/v1/fill/w_1800,h_797,al_c,q_85,enc_avif,quality_auto/f34943_bd0dc73a4ebc4bcc836bc141d00ba737~mv2.jpg',
+      image: 'https://www.rosta.com/ro-wAssets/img/agriculture-machinery/timber-and-agriculture.png',
       title: 'Türkiye\'den Dünyaya Uzanan Teknoloji',
       subtitle: 'Yerli üretim, uluslararası standartlar'
     },
     {
       id: 4,
-      image: 'https://static.wixstatic.com/media/f34943_3e57cf6945934ff6ba7628b519d27652~mv2.jpg/v1/fill/w_1800,h_797,al_c,q_85,enc_avif,quality_auto/f34943_3e57cf6945934ff6ba7628b519d27652~mv2.jpg',
+      image: 'https://www.corkfarmmachinery.ie/wp-content/uploads/2023/12/FC9330RA_WORK_AERIAL_MF-5-1.jpg',
       title: 'Sürdürülebilir Tarım İçin Yenilikçi Çözümler',
       subtitle: 'Çevre dostu teknolojilerle doğaya saygılı üretim'
     },
@@ -65,6 +65,10 @@ export default function Slider() {
             fill
             className="object-cover"
             priority={index === 0}
+            quality={95}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
           />
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/40" />
