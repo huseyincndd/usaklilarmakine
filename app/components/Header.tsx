@@ -13,32 +13,26 @@ export default function Header() {
   const menuItems = [
     { 
       id: 'urunler',
-      name: 'Ürünler', 
-      href: '#urunler',
+      name: 'Ürünler',
+      href: '/urunler',
       imageUrl: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&h=1080&fit=crop&q=80'
     },
     { 
       id: 'kurumsal',
-      name: 'Kurumsal', 
-      href: '#kurumsal',
+      name: 'Kurumsal',
+      href: '/kurumsal',
       imageUrl: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&h=1080&fit=crop&q=80'
-    },
-    { 
-      id: 'servis',
-      name: 'Servis', 
-      href: '#servis',
-      imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&h=1080&fit=crop&q=80'
     },
     { 
       id: 'blog',
       name: 'Blog', 
-      href: '#blog',
+      href: '/blog',
       imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop&q=80'
     },
     { 
       id: 'iletisim',
       name: 'İletişim', 
-      href: '#iletisim',
+      href: '/iletisim',
       imageUrl: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1920&h=1080&fit=crop&q=80'
     }
   ];

@@ -55,80 +55,128 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="pt-12 pb-20 relative bg-white">
+    <section className="pt-12 pb-20 relative bg-gradient-to-b from-white via-green-50/20 to-white overflow-hidden">
+      {/* Background decorations */}
+      <motion.div
+        className="absolute top-40 left-10 w-96 h-96 bg-green-200/10 rounded-full blur-3xl"
+        animate={{
+          scale: [1, 1.2, 1],
+          y: [0, 50, 0],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+      <motion.div
+        className="absolute bottom-40 right-10 w-80 h-80 bg-emerald-200/10 rounded-full blur-3xl"
+        animate={{
+          scale: [1, 1.3, 1],
+          y: [0, -50, 0],
+        }}
+        transition={{
+          duration: 22,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 3
+        }}
+      />
+
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         
         {/* Header */}
         <motion.div 
-          className="text-left lg:text-center mb-16"
+          className="text-left lg:text-center mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
            {/* Main title */}
-           <h2 className="text-4xl lg:text-5xl font-bold">
-             <span className="text-gray-900">Sıkça Sorulan Sorular</span>
+           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+             <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Sıkça Sorulan Sorular</span>
              <span className="text-gray-600"> – </span>
              <span className="text-gray-800">Uşaklılar Makine</span>
            </h2>
+           <motion.div 
+            className="h-1.5 w-32 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mx-auto lg:mx-auto"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          />
         </motion.div>
 
         {/* FAQ Grid */}
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8">
           {/* Left Column */}
-          <div className="space-y-12">
+          <div className="space-y-6">
             {faqs.slice(0, 6).map((faq, index) => (
               <motion.div 
                 key={index}
-                className="flex gap-4"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-green-100 hover:border-green-300 group cursor-pointer"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
+                whileHover={{ scale: 1.02, y: -5 }}
               >
-                {/* Question Mark Icon */}
-                <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white font-bold text-sm">?</span>
-                </div>
-                
-                {/* Question and Answer */}
-                <div className="flex-1">
-                  <h3 className="text-gray-900 font-bold text-lg mb-3">
-                    {faq.question}
-                  </h3>
-                  <p className="text-gray-700 text-sm leading-relaxed">
-                    {faq.answer}
-                  </p>
+                <div className="flex gap-4">
+                  {/* Question Mark Icon */}
+                  <motion.div 
+                    className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg"
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <span className="text-white font-bold text-lg">?</span>
+                  </motion.div>
+                  
+                  {/* Question and Answer */}
+                  <div className="flex-1">
+                    <h3 className="text-gray-900 font-bold text-lg mb-3 group-hover:text-green-600 transition-colors">
+                      {faq.question}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             ))}
           </div>
 
           {/* Right Column */}
-          <div className="space-y-12">
+          <div className="space-y-6">
             {faqs.slice(6, 12).map((faq, index) => (
               <motion.div 
                 key={index + 6}
-                className="flex gap-4"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: (index + 6) * 0.1 }}
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-green-100 hover:border-green-300 group cursor-pointer"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
+                whileHover={{ scale: 1.02, y: -5 }}
               >
-                {/* Question Mark Icon */}
-                <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white font-bold text-sm">?</span>
-                </div>
-                
-                {/* Question and Answer */}
-                <div className="flex-1">
-                  <h3 className="text-gray-900 font-bold text-lg mb-3">
-                    {faq.question}
-                  </h3>
-                  <p className="text-gray-700 text-sm leading-relaxed">
-                    {faq.answer}
-                  </p>
+                <div className="flex gap-4">
+                  {/* Question Mark Icon */}
+                  <motion.div 
+                    className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg"
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <span className="text-white font-bold text-lg">?</span>
+                  </motion.div>
+                  
+                  {/* Question and Answer */}
+                  <div className="flex-1">
+                    <h3 className="text-gray-900 font-bold text-lg mb-3 group-hover:text-green-600 transition-colors">
+                      {faq.question}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             ))}

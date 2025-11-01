@@ -23,17 +23,17 @@ const AboutSection = ({ noBg = false }: { noBg?: boolean }) => {
       {/* Unified Background Elements */}
       {!noBg && (
         <>
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white" />
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 to-white" />
           <div className="absolute inset-0 overflow-hidden">
             <motion.div
-              className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"
+              className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-300 to-transparent"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               transition={{ duration: 1.5, ease: 'easeOut' }}
               viewport={{ once: true }}
             />
             <motion.div
-              className="absolute bottom-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"
+              className="absolute bottom-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-300 to-transparent"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               transition={{ duration: 1.5, delay: 0.5, ease: 'easeOut' }}
@@ -42,7 +42,7 @@ const AboutSection = ({ noBg = false }: { noBg?: boolean }) => {
           </div>
           <div className="absolute inset-0 overflow-hidden">
             <motion.div
-              className="absolute top-1/3 left-1/4 w-32 h-32 bg-gray-200/30 rounded-full blur-2xl"
+              className="absolute top-1/3 left-1/4 w-32 h-32 bg-emerald-200/30 rounded-full blur-2xl"
               animate={{ 
                 scale: [1, 1.2, 1],
                 opacity: [0.3, 0.6, 0.3]
@@ -50,7 +50,7 @@ const AboutSection = ({ noBg = false }: { noBg?: boolean }) => {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             />
             <motion.div
-              className="absolute bottom-1/3 right-1/4 w-24 h-24 bg-gray-200/30 rounded-full blur-2xl"
+              className="absolute bottom-1/3 right-1/4 w-24 h-24 bg-emerald-200/30 rounded-full blur-2xl"
               animate={{ 
                 scale: [1, 1.3, 1],
                 opacity: [0.3, 0.5, 0.3]
@@ -68,7 +68,7 @@ const AboutSection = ({ noBg = false }: { noBg?: boolean }) => {
           <div className="relative h-[400px] sm:h-[500px] lg:h-[700px] order-2 lg:order-1">
             {/* Top-Left Pattern Panel */}
             <motion.div
-              className="absolute top-4 left-4 lg:top-10 lg:left-0 w-20 h-20 sm:w-24 sm:h-24 lg:w-48 lg:h-48 bg-gray-100/50 rounded-2xl z-20 flex items-center justify-center"
+              className="absolute top-4 left-4 lg:top-10 lg:left-0 w-20 h-20 sm:w-24 sm:h-24 lg:w-48 lg:h-48 bg-emerald-100/50 rounded-2xl z-20 flex items-center justify-center"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
@@ -76,7 +76,7 @@ const AboutSection = ({ noBg = false }: { noBg?: boolean }) => {
             >
               <div className="grid grid-cols-4 sm:grid-cols-5 gap-0.5 sm:gap-1">
                 {[...Array(16)].map((_, i) => (
-                  <div key={i} className="w-3 h-3 sm:w-4 sm:h-4 lg:w-6 lg:h-10 text-gray-800 flex items-center justify-center">
+                  <div key={i} className="w-3 h-3 sm:w-4 sm:h-4 lg:w-6 lg:h-10 text-emerald-700 flex items-center justify-center">
                     <svg viewBox="0 0 24 24" fill="currentColor" className="w-2 h-2 sm:w-3 sm:h-3 lg:w-6 lg:h-6">
                       <path d="M19 5L5 19M5 5L19 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                     </svg>
@@ -127,7 +127,7 @@ const AboutSection = ({ noBg = false }: { noBg?: boolean }) => {
               className="text-3xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-tight"
             >
               Teknoloji ve kaliteyle{" "}
-              <span className="text-gray-800">her makineyi mükemmelleştiriyoruz.</span>
+              <span className="text-emerald-700">her makineyi mükemmelleştiriyoruz.</span>
             </motion.h2>
 
             {/* Açıklama */}
@@ -150,15 +150,15 @@ const AboutSection = ({ noBg = false }: { noBg?: boolean }) => {
               className="space-y-4"
             >
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-gray-800 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-emerald-600 rounded-full mt-2 flex-shrink-0"></div>
                 <p className="text-gray-700 text-sm">Kapsamlı üretim süreci: Tasarımdan üretim ve kalite kontrolüne, teslimata kadar tüm aşamalarda aktif rol alıyoruz.</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-gray-800 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-emerald-600 rounded-full mt-2 flex-shrink-0"></div>
                 <p className="text-gray-700 text-sm">Her yerde güvenilir hizmet: Türkiye'nin 81 ilinde ve uluslararası pazarlarda makineleri titizlikle üretiyoruz.</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-gray-800 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-emerald-600 rounded-full mt-2 flex-shrink-0"></div>
                 <p className="text-gray-700 text-sm">Teknoloji ve vizyon: Modern teknolojiyi yenilikçi yaklaşımlarla birleştirerek çiftçilere unutulmaz deneyimler sunuyoruz.</p>
               </div>
             </motion.div>
