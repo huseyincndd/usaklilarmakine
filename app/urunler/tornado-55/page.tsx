@@ -3,7 +3,7 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -357,6 +357,215 @@ function TechnicalSpecsSection() {
   );
 }
 
+// Gallery Section - Square Images
+function GallerySection() {
+  const galleryImages = [
+    {
+      src: "https://villaqrmenu.b-cdn.net/usaklilarmakine/Tornado55-1.webp",
+      alt: "Tornado 55 - Ürün Görseli 1"
+    },
+    {
+      src: "https://villaqrmenu.b-cdn.net/usaklilarmakine/Tornado55-2.webp",
+      alt: "Tornado 55 - Ürün Görseli 2"
+    },
+    {
+      src: "https://villaqrmenu.b-cdn.net/usaklilarmakine/Tornado55-3.webp",
+      alt: "Tornado 55 - Ürün Görseli 3"
+    },
+    {
+      src: "https://villaqrmenu.b-cdn.net/usaklilarmakine/Tornado55-4.webp",
+      alt: "Tornado 55 - Ürün Görseli 4"
+    },
+    {
+      src: "https://villaqrmenu.b-cdn.net/usaklilarmakine/Tornado55-5.webp",
+      alt: "Tornado 55 - Ürün Görseli 5"
+    },
+    {
+      src: "https://villaqrmenu.b-cdn.net/usaklilarmakine/Tornado55-6.webp",
+      alt: "Tornado 55 - Ürün Görseli 6"
+    }
+  ];
+
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+  // Modal açıkken body scroll'unu devre dışı bırak
+  useEffect(() => {
+    if (selectedImage !== null) {
+      // Modal açıkken body scroll'unu kapat
+      document.body.style.overflow = 'hidden';
+      // Touch cihazlar için de
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+    } else {
+      // Modal kapalıyken scroll'u geri aç
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    }
+
+    // Cleanup function
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    };
+  }, [selectedImage]);
+
+  return (
+    <section className="py-24 bg-gradient-to-b from-white via-green-50/30 to-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="gallery-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <circle cx="20" cy="20" r="1.5" fill="#22c55e"/>
+              <path d="M 0 20 L 40 20 M 20 0 L 20 40" stroke="#10b981" strokeWidth="0.5" opacity="0.3"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#gallery-grid)" />
+        </svg>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-5xl font-bold text-gray-900 mb-4">
+            <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+              Galeri
+            </span>
+          </h2>
+          <div className="h-2 w-40 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mx-auto mb-4" />
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Tornado 55'in farklı açılardan görüntüleri ve detayları
+          </p>
+        </motion.div>
+
+        {/* Gallery Grid - 6 Square Images */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {galleryImages.map((image, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05, y: -8 }}
+              className="relative group cursor-pointer overflow-hidden rounded-2xl aspect-square bg-gradient-to-br from-gray-100 to-gray-200 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-green-100 hover:border-green-300"
+              onClick={() => setSelectedImage(index)}
+            >
+              {/* Image Container */}
+              <div className="relative w-full h-full">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                
+                {/* Overlay Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                {/* Hover Icon */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <motion.div
+                    className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border-2 border-white/40"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                    </svg>
+                  </motion.div>
+                </div>
+
+                {/* Image Number Badge */}
+                <div className="absolute top-4 left-4 bg-green-500/90 backdrop-blur-sm text-white text-sm font-bold px-3 py-1.5 rounded-full border-2 border-white/30">
+                  {index + 1}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Lightbox Modal */}
+        {selectedImage !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/90 backdrop-blur-md z-[9999] flex items-center justify-center p-4 overflow-hidden"
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              className="relative max-w-5xl max-h-[90vh] w-full flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="relative w-full h-full max-h-[90vh] flex items-center justify-center">
+                <Image
+                  src={galleryImages[selectedImage].src}
+                  alt={galleryImages[selectedImage].alt}
+                  width={1200}
+                  height={1200}
+                  className="max-w-full max-h-[90vh] w-auto h-auto object-contain rounded-2xl shadow-2xl"
+                  priority
+                />
+                
+                {/* Close Button */}
+                <button
+                  onClick={() => setSelectedImage(null)}
+                  className="absolute top-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all border-2 border-white/30 z-10"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+
+                {/* Navigation Buttons */}
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedImage(selectedImage > 0 ? selectedImage - 1 : galleryImages.length - 1);
+                  }}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all border-2 border-white/30 z-10"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedImage(selectedImage < galleryImages.length - 1 ? selectedImage + 1 : 0);
+                  }}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all border-2 border-white/30 z-10"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+
+                {/* Image Counter */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/20 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-semibold border-2 border-white/30 z-10">
+                  {selectedImage + 1} / {galleryImages.length}
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </div>
+    </section>
+  );
+}
+
 // Advantages Section
 function AdvantagesSection() {
   const mainAdvantages = [
@@ -654,6 +863,7 @@ export default function Tornado55Page() {
       <main className="pt-20">
         <Tornado55Hero />
         <TechnicalSpecsSection />
+        <GallerySection />
         <AdvantagesSection />
         <UsageAreasSection />
         <CTAFooterSection />

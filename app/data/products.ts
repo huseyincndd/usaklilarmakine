@@ -56,7 +56,8 @@ export const categories: Category[] = [
     description: "Profesyonel sıvı gübre dağıtım çözümü",
     isFlagship: false,
     productCount: 4,
-    image: "https://fimaks.com/wp-content/uploads/2025/05/FST-12000.jpg",
+    // image: "https://fimaks.com/wp-content/uploads/2025/05/FST-12000.jpg",
+    image: "",
     seoTitle: "Sıvı Gübre Tankeri - 5, 10, 15, 20 Ton | ATK",
     seoDescription: "Farklı kapasite seçenekleriyle sıvı gübre tankeri. Dayanıklı yapı, homojen dağıtım sistemi.",
     products: [
@@ -64,7 +65,8 @@ export const categories: Category[] = [
         id: 201,
         name: "5 Ton Sıvı Gübre Tankeri",
         slug: "5-ton-sivi-gubre-tankeri",
-        image: "https://fimaks.com/wp-content/uploads/2017/10/SIVI-GÜBRE-TANKI-6-TON.jpg",
+        // image: "https://fimaks.com/wp-content/uploads/2017/10/SIVI-GÜBRE-TANKI-6-TON.jpg",
+        image: "",
         specs: [
           "5 Ton Kapasite",
           "Paslanmaz Çelik Tank",
@@ -77,7 +79,8 @@ export const categories: Category[] = [
         id: 202,
         name: "10 Ton Sıvı Gübre Tankeri",
         slug: "10-ton-sivi-gubre-tankeri",
-        image: "https://fimaks.com/wp-content/uploads/2017/10/SIVI-GÜBRE-TANKI-10-TON.jpg",
+        // image: "https://fimaks.com/wp-content/uploads/2017/10/SIVI-GÜBRE-TANKI-10-TON.jpg",
+        image: "",
         specs: [
           "10 Ton Kapasite",
           "Paslanmaz Çelik Tank",
@@ -90,7 +93,8 @@ export const categories: Category[] = [
         id: 203,
         name: "15 Ton Sıvı Gübre Tankeri",
         slug: "15-ton-sivi-gubre-tankeri",
-        image: "https://fimaks.com/wp-content/uploads/2022/03/Basliksiz-1.jpg",
+        // image: "https://fimaks.com/wp-content/uploads/2022/03/Basliksiz-1.jpg",
+        image: "",
         specs: [
           "15 Ton Kapasite",
           "Yüksek Mukavemetli Tank",
@@ -103,7 +107,8 @@ export const categories: Category[] = [
         id: 204,
         name: "20 Ton Sıvı Gübre Tankeri",
         slug: "20-ton-sivi-gubre-tankeri",
-        image: "https://fimaks.com/wp-content/uploads/2017/10/SIVI-GÜBRE-TANKI-20-TON.jpg",
+        // image: "https://fimaks.com/wp-content/uploads/2017/10/SIVI-GÜBRE-TANKI-20-TON.jpg",
+        image: "",
         specs: [
           "20 Ton Kapasite",
           "Endüstriyel Sınıf Tank",
@@ -121,7 +126,8 @@ export const categories: Category[] = [
     description: "Verimli katı gübre dağıtım sistemi",
     isFlagship: false,
     productCount: 4,
-    image: "https://fimaks.com/wp-content/uploads/2017/10/GUBRE-ROMORKU-10-TON-300x300.jpg",
+    // image: "https://fimaks.com/wp-content/uploads/2017/10/GUBRE-ROMORKU-10-TON-300x300.jpg",
+    image: "",
     seoTitle: "Katı Gübre Serpme Römorku - 5, 10, 15, 20 m³ | ATK",
     seoDescription: "Farklı hacim seçenekleriyle katı gübre serpme römorku. Eşit dağıtım, dayanıklı yapı.",
     products: [
@@ -129,7 +135,8 @@ export const categories: Category[] = [
         id: 301,
         name: "5 m³ Katı Gübre Serpme Römorku",
         slug: "5-m3-kati-gubre-serpme-romorku",
-        image: "https://fimaks.com/wp-content/uploads/2017/10/GUBRE-ROMORKU-5-TON-300x300.jpg",
+        // image: "https://fimaks.com/wp-content/uploads/2017/10/GUBRE-ROMORKU-5-TON-300x300.jpg",
+        image: "",
         specs: [
           "5 m³ Hacim",
           "Çift Diskli Serpme",
@@ -142,7 +149,8 @@ export const categories: Category[] = [
         id: 302,
         name: "10 m³ Katı Gübre Serpme Römorku",
         slug: "10-m3-kati-gubre-serpme-romorku",
-        image: "https://fimaks.com/wp-content/uploads/2017/10/GUBRE-ROMORKU-10-TON-300x300.jpg",
+        // image: "https://fimaks.com/wp-content/uploads/2017/10/GUBRE-ROMORKU-10-TON-300x300.jpg",
+        image: "",
         specs: [
           "10 m³ Hacim",
           "Hidrolik Serpme Sistemi",
@@ -155,7 +163,8 @@ export const categories: Category[] = [
         id: 303,
         name: "15 m³ Katı Gübre Serpme Römorku",
         slug: "15-m3-kati-gubre-serpme-romorku",
-        image: "https://fimaks.com/wp-content/uploads/2017/10/GUBRE-ROMORKU-18-TON-300x300.jpg",
+        // image: "https://fimaks.com/wp-content/uploads/2017/10/GUBRE-ROMORKU-18-TON-300x300.jpg",
+        image: "",
         specs: [
           "15 m³ Hacim",
           "Güçlü Serpme Motoru",
@@ -168,7 +177,8 @@ export const categories: Category[] = [
         id: 304,
         name: "20 m³ Katı Gübre Serpme Römorku",
         slug: "20-m3-kati-gubre-serpme-romorku",
-        image: "https://fimaks.com/wp-content/uploads/2017/10/GUBRE-ROMORKU-25-TON-300x300.jpg",
+        // image: "https://fimaks.com/wp-content/uploads/2017/10/GUBRE-ROMORKU-25-TON-300x300.jpg",
+        image: "",
         specs: [
           "20 m³ Hacim",
           "Endüstriyel Kapasıte",

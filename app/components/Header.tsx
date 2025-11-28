@@ -116,7 +116,7 @@ export default function Header() {
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center hover:scale-105 transition-all duration-300 cursor-pointer group">
                 <span className="text-2xl font-bold text-gray-900 tracking-wider">
-                  UŞAKLIL<span className="text-green-700">A</span>R
+                  UŞAKLILAR
                 </span>
                 <span className="ml-2 text-sm text-gray-600 font-light">
                   MAKİNE
