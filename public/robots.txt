@@ -1,0 +1,7 @@
+# robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.sitenizin-adresi.com/sitemap.xml
+
