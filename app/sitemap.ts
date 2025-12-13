@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { categories } from './data/products'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.sitenizin-adresi.com' // Burayı kendi sitenizin adresiyle değiştirin
+  const baseUrl = 'https://www.usaklilarmakine.com' // Burayı kendi sitenizin adresiyle değiştirin
   
   // Ana sayfalar
   const mainPages = [

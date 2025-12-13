@@ -3,5 +3,5 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.sitenizin-adresi.com/sitemap.xml
+Sitemap: https://www.usaklilarmakine.com/sitemap.xml
 
