@@ -14,7 +14,24 @@ import ContactCta from "../components/corporate/ContactCta";
 export const metadata = {
   title: "Kurumsal | ATK – Uşaklılar Makine",
   description:
-    "ATK, Uşaklılar Makine’nin mühendislik gücü ve sahadaki bilgi birikimiyle tarım ve hayvancılık için yenilikçi, dayanıklı ve verimli çözümler sunar.",
+    "ATK, Uşaklılar Makine'nin mühendislik gücü ve sahadaki bilgi birikimiyle tarım ve hayvancılık için yenilikçi, dayanıklı ve verimli çözümler sunar. Vizyon, misyon, değerlerimiz ve 20+ yıllık deneyimimiz.",
+  keywords: [
+    "hakkımızda",
+    "ATK",
+    "Uşaklılar Makine",
+    "kurumsal",
+    "vizyon",
+    "misyon",
+    "tarım makineleri üreticisi",
+    "kalite güvencesi",
+    "sürdürülebilirlik",
+    "mühendislik"
+  ],
+  openGraph: {
+    title: 'Kurumsal | ATK – Uşaklılar Makine',
+    description: "ATK, Uşaklılar Makine'nin mühendislik gücü ve sahadaki bilgi birikimiyle tarım ve hayvancılık için yenilikçi, dayanıklı ve verimli çözümler sunar.",
+    url: 'https://www.usaklilarmakine.com/kurumsal',
+  },
 };
 
 export default function KurumsalPage() {
@@ -37,5 +54,4 @@ export default function KurumsalPage() {
     </div>
   );
 }
-
 

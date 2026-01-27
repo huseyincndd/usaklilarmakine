@@ -1,21 +1,24 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Ürünler - Tarım ve Hayvancılık Makineleri | ATK',
-  description: 'Yem öğütme, gübre tankeri, pompa sistemleri ve daha fazlası. Tarım ve hayvancılık için profesyonel makine çözümleri.',
-  keywords: 'tarım makineleri, hayvancılık ekipmanları, yem öğütme makinesi, gübre tankeri, tornado 55',
+  title: "Ürünler",
+  description: "ATK Uşaklılar Makine ürün kataloğu: Balya makineleri, diskaro, pulluk, kültivatör, gübre dağıtıcı, sap parçalayıcı ve daha fazlası. CE sertifikalı, yüksek kaliteli tarım makineleri.",
+  keywords: [
+    "balya makinesi",
+    "diskaro",
+    "pulluk",
+    "kültivatör",
+    "gübre dağıtıcı",
+    "sap parçalayıcı",
+    "tarım makineleri",
+    "traktör ekipmanları",
+    "toprak işleme makineleri",
+    "ATK ürünler"
+  ],
   openGraph: {
-    title: 'Ürünler - Tarım ve Hayvancılık Makineleri | ATK',
-    description: 'Yem öğütme, gübre tankeri, pompa sistemleri ve daha fazlası.',
-    type: 'website',
-    images: [
-      {
-        url: '/image-Photoroom.png',
-        width: 1200,
-        height: 630,
-        alt: 'ATK Ürünler',
-      },
-    ],
+    title: 'Ürünler | ATK Uşaklılar Makine',
+    description: 'ATK Uşaklılar Makine ürün kataloğu: Balya makineleri, diskaro, pulluk, kültivatör ve daha fazlası. CE sertifikalı, yüksek kaliteli tarım makineleri.',
+    url: 'https://www.usaklilarmakine.com/urunler',
   },
 };
 
@@ -24,6 +27,5 @@ export default function UrunlerLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return children;
 }
-
