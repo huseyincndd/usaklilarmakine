@@ -4,6 +4,12 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "İletişim",
+  description: "ATK Uşaklılar Makine iletişim bilgileri. Adres, telefon, e-posta ve iletişim formu ile bize ulaşın. 7/24 destek ve hızlı çözüm.",
+};
 
 // Contact Hero Component with Particle Canvas
 function ContactHero() {

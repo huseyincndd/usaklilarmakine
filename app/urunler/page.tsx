@@ -6,6 +6,12 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { categories } from '../data/products';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Ürünlerimiz",
+  description: "ATK Uşaklılar Makine ürün kataloğu. Balya makineleri, diskaro, pulluk, kültivatör ve diğer tarım makinelerimizi inceleyin.",
+};
 
 // Products Hero Section
 function ProductsHero() {

@@ -12,7 +12,7 @@ import Stats from "../components/corporate/Stats";
 import ContactCta from "../components/corporate/ContactCta";
 
 export const metadata = {
-  title: "Kurumsal | ATK – Uşaklılar Makine",
+  title: "Kurumsal",
   description:
     "ATK, Uşaklılar Makine'nin mühendislik gücü ve sahadaki bilgi birikimiyle tarım ve hayvancılık için yenilikçi, dayanıklı ve verimli çözümler sunar. Vizyon, misyon, değerlerimiz ve 20+ yıllık deneyimimiz.",
   keywords: [

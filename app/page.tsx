@@ -12,7 +12,6 @@ import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
 
 export const metadata: Metadata = {
-  title: "Ana Sayfa",
   description: "ATK Uşaklılar Makine - 20+ yıllık deneyim ile tarım ve hayvancılık sektörüne özel, yüksek kaliteli ve dayanıklı makine çözümleri. Balya makineleri, diskaro, pulluk, kültivatör ve daha fazlası.",
   openGraph: {
     title: 'ATK Uşaklılar Makine | Tarım Makineleri Üreticisi',
