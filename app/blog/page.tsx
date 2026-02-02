@@ -5,12 +5,6 @@ import Footer from '../components/Footer';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Blog & Haberler",
-  description: "Tarım sektöründeki son gelişmeler, teknolojik yenilikler ve ATK Uşaklılar Makine'den haberler. Bilgi ve deneyimlerimizi paylaşıyoruz.",
-};
 
 // Blog Hero Component with Particle Canvas
 function BlogHero() {
